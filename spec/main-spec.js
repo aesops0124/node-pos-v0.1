@@ -6,53 +6,53 @@ describe('pos', () => {
     beforeEach(() => {
         inputs = [
             {
-                barcode: 'ITEM000000',
-                name: '可口可乐',
-                unit: '瓶',
-                price: 3.00
-
+                Barcode: 'ITEM000000',
+                Name: 'Coca-Cola',
+                Unit: 'bottle',
+                Price: 3.00
+        
             },
             {
-                barcode: 'ITEM000000',
-                name: '可口可乐',
-                unit: '瓶',
-                price: 3.00
+                Barcode: 'ITEM000000',
+                Name: 'Coca-Cola',
+                Unit: 'bottle',
+                Price: 3.00
             },
             {
-                barcode: 'ITEM000000',
-                name: '可口可乐',
-                unit: '瓶',
-                price: 3.00
+                Barcode: 'ITEM000000',
+                Name: 'Coca-Cola',
+                Unit: 'bottle',
+                Price: 3.00
             },
             {
-                barcode: 'ITEM000000',
-                name: '可口可乐',
-                unit: '瓶',
-                price: 3.00
+                Barcode: 'ITEM000000',
+                Name: 'Coca-Cola',
+                Unit: 'bottle',
+                Price: 3.00
             },
             {
-                barcode: 'ITEM000000',
-                name: '可口可乐',
-                unit: '瓶',
-                price: 3.00
+                Barcode: 'ITEM000000',
+                Name: 'Coca-Cola',
+                Unit: 'bottle',
+                Price: 3.00
             },
             {
-                barcode: 'ITEM000001',
-                name: '雪碧',
-                unit: '瓶',
-                price: 3.00
+                Barcode: 'ITEM000001',
+                Name: 'Sprite',
+                Unit: 'bottle',
+                Price: 3.00
             },
             {
-                barcode: 'ITEM000001',
-                name: '雪碧',
-                unit: '瓶',
-                price: 3.00
+                Barcode: 'ITEM000001',
+                Name: 'Sprite',
+                Unit: 'bottle',
+                Price: 3.00
             },
             {
-                barcode: 'ITEM000004',
-                name: '电池',
-                unit: '个',
-                price: 2.00
+                Barcode: 'ITEM000004',
+                Name: 'Battery',
+                Unit: 'a',
+                Price: 2.00
             }
         ];
     });
@@ -62,13 +62,13 @@ describe('pos', () => {
         let actualText = printInventory(inputs);
 
         let expectText =
-            '***<没钱赚商店>购物清单***\n' +
-            '名称：可口可乐，数量：5瓶，单价：3.00(元)，小计：15.00(元)\n' +
-            '名称：雪碧，数量：2瓶，单价：3.00(元)，小计：6.00(元)\n' +
-            '名称：电池，数量：1个，单价：2.00(元)，小计：2.00(元)\n' +
+            '***<store earning no money>Receipt ***\n' +
+            'Name: Coca-Cola, Quantity: 5 bottles, Unit price: 3.00 (yuan), Subtotal: 15.00 (yuan)\n' +
+            'Name: Sprite, Quantity: 2 bottles, Unit price: 3.00 (yuan), Subtotal: 6.00 (yuan)\n' +
+            'Name: Battery, Quantity: 1 a, Unit price: 2.00 (yuan), Subtotal: 2.00 (yuan)\n' +
             '----------------------\n' +
-            '总计：23.00(元)\n' +
-            '**********************';
+            'Total: 23.00 (yuan)\n' +
+            '**********************\n';
 
         expect(actualText).toBe(expectText);
     });
